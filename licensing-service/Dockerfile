@@ -16,7 +16,7 @@ RUN mkdir -p target/dependency && (cd target/dependency; jar -xf /app.jar)
 
 #stage 2
 #Same Java runtime
-FROM openjdk:11-slim
+FROM --platform=linux/arm64 openjdk:11-slim
 
 #Add volume pointing to /tmp
 VOLUME /tmp
